@@ -1,0 +1,2 @@
+MATCH (s:Supplier)->(:Product)->(c:Category)
+RETURN s.companyName as Company, collect(distinct c.CategoryName) as Categories
