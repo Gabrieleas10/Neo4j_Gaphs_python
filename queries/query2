@@ -1,0 +1,2 @@
+MATCH (c:Category {categoryName:"Produce"})<-(:Product)<-(s:Supplier)
+RETURN DISTINCT s.companyName AS ProduceSuppliers
