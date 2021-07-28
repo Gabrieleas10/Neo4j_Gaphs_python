@@ -1,0 +1,2 @@
+MATCH (p:Product),(c:Category) WHERE p.categoryID = c.categoryID CREATE (p)-[:PART_OF]->(c)
+MATCH (p:Product),(c:Supplier) WHERE p.supplierID = c.supplierID CREATE (s)-[:SUPPLIES]->(p)

@@ -1,0 +1,3 @@
+LOAD CSV WITH HEADERS from "file:///products.csv" AS ROW CREATE (n:Product) 
+SET n = row , n.unitPrice = toFloat(row.unitPrice),n.unitsInStock = toInteger(row.unitsInStock ), 
+n.unitsOnOrder = toInteger(row.unitsOnOrder),n.reorderLevel = toInteger(row.reorderLevel), n.discontinued = (row.discontinued <>0)
